@@ -89,6 +89,8 @@ nb_conv = 3
 #split X ,y into training and testing set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=4)
 
+#eikhane je reshape seta train data (72,1,128,128) ar validation (19,1,128,128)
+#mne 72 ta train data 19 test data
 
 X_train = X_train.reshape(X_train.shape[0], 1, img_rows, img_cols)
 X_test = X_test.reshape(X_test.shape[0], 1, img_rows, img_cols)
@@ -107,10 +109,20 @@ print(X_test.shape[0], 'test samples')
 Y_train = np_utils.to_categorical(y_train, nb_classes)
 Y_test = np_utils.to_categorical(y_test, nb_classes)
 
+
+
 i = 16
 plt.imshow(X_train[i, 0], interpolation='nearest')
 print("label : ", Y_train[i,:])
 
+
+#jodi input-shape[1,row,col] dei tahole ei vul dhore
+#Negative dimension size caused by subtracting 3 from 1 for 'conv2d_1/convolution' 
+#(op: 'Conv2D') with input shapes: [?,1,128,128], [3,3,128,32].
+#abar jodi [128,128,1] dei tahole 
+#fit e ese milate pare na
+#expected conv2d_3_input to have shape (None, 128, 128, 1) 
+#but got array with shape (19, 1, 128, 128)
 
 
 
@@ -138,16 +150,11 @@ model.add(Activation('softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adadelta')
 
 #%%
-#jodi input-shape[1,row,col] dei tahole ei vul dhore
-#Negative dimension size caused by subtracting 3 from 1 for 'conv2d_1/convolution' (op: 'Conv2D') with input shapes: [?,1,128,128], [3,3,128,32].
-#abar jodi [128,128,1] dei tahole 
 #train 8
 
     model.compile(loss=keras.losses.categorical_crossentropy, \
                   optimizer=keras.optimizers.Adadelta(), \
                   metrics=['accuracy'])
-#fit e ese milate pare na
-#expected conv2d_3_input to have shape (None, 128, 128, 1) but got array with shape (19, 1, 128, 128)
     model.fit(X_train, Y_train, \
               batch_size=batch_size, \
               epochs=nb_epoch, \
