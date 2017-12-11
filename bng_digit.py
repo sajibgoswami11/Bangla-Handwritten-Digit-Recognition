@@ -138,11 +138,16 @@ model.add(Activation('softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adadelta')
 
 #%%
+#jodi input-shape[1,row,col] dei tahole ei vul dhore
+#Negative dimension size caused by subtracting 3 from 1 for 'conv2d_1/convolution' (op: 'Conv2D') with input shapes: [?,1,128,128], [3,3,128,32].
+#abar jodi [128,128,1] dei tahole 
 #train 8
 
     model.compile(loss=keras.losses.categorical_crossentropy, \
                   optimizer=keras.optimizers.Adadelta(), \
                   metrics=['accuracy'])
+#fit e ese milate pare na
+#expected conv2d_3_input to have shape (None, 128, 128, 1) but got array with shape (19, 1, 128, 128)
     model.fit(X_train, Y_train, \
               batch_size=batch_size, \
               epochs=nb_epoch, \
