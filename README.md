@@ -4,6 +4,7 @@ Bengali Handwritten Digit Recognition using Convolutional Neural Networks (CNNs)
 
 
 Bengali is the native language of Bangladesh, and is spoken by 300 million people worldwide, making it the seventh most spoken language in the world by total number of native speakers. Here, I work with the recognition of the 10 basic digit characters only.
+
 ###Dataset
 
 The dataset was obtained online from Bangla-Isolated-Lekha.  More than 15,000 and around 3,000 images respectively are taken as train-set and test-set.
