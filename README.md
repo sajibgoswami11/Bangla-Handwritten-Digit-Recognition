@@ -1,5 +1,4 @@
-
-#Bengali Handwritten Digit Recognition
+# Bengali-Handwritten-Digit-Recognition
 
 Bengali Handwritten Digit Recognition using Convolutional Neural Networks (CNNs) Handwritten character recognition is an old problem that has been extensively studied for many different languages around the world. Although very high recognition rate has been achieved repeatedly using a variety of methods on the English character set, there exists limited work on the Bengali character set, and most of these achieved recognition accuracies below 90%. Here,  that has employed CNNs to the bengali character set, and that, too, achieved 91.147% accuracy.
 
