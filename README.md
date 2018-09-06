@@ -13,5 +13,5 @@ The dataset was obtained online from Bangla-Isolated-Lekha.  More than 15,000 an
 
 
 
-[![Watch the video](https://github.com/sajibgoswami11/Bangla-Handwritten-Digit-Recognition/blob/master/BHRDRS.mp4)]
+[![Watch the video]](https://www.youtube.com/watch?v=m1dy2zq8qhE)
 
