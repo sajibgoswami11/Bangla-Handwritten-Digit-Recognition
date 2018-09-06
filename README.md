@@ -10,8 +10,8 @@ Bengali is the native language of Bangladesh, and is spoken by 300 million peopl
 The dataset was obtained online from Bangla-Isolated-Lekha.  More than 15,000 and around 3,000 images respectively are taken as train-set and test-set.
 
 
-https://www.facebook.com/sabuj.goswami.7/videos/1737338306331431/
 
 
-[![Watch the video](https://www.facebook.com/sabuj.goswami.7/videos/1737338306331431/)
+
+[![Watch the video](https://github.com/sajibgoswami11/Bangla-Handwritten-Digit-Recognition/blob/master/BHRDRS.mp4)]
 
