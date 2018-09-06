@@ -13,5 +13,5 @@ The dataset was obtained online from Bangla-Isolated-Lekha.  More than 15,000 an
 
 
 
-[![Watch the video]](https://www.youtube.com/watch?v=m1dy2zq8qhE)
+[![Watch the video](https://youtu.be/m1dy2zq8qhE)](https://www.youtube.com/watch?v=m1dy2zq8qhE)
 
